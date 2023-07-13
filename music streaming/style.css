@@ -1,0 +1,73 @@
+
+let play = document.querySelector('#play');
+let next = document.querySelector('#next');
+let title = document.querySelector('#title');
+let recent_volume= document.querySelector('#volume');
+let volume_show = document.querySelector('#volume_show');
+let slider = document.querySelector('#duration_slider');
+let show_duration = document.querySelector('#show_duration');
+let track_image = document.querySelector('#track_image');
+let auto_play = document.querySelector('#auto');
+let present = document.querySelector('#present');
+let total = document.querySelector('#total');
+let artist = document.querySelector('#artist');
+
+
+
+let timer;
+let autoplay = 0;
+
+let index_no = 0;
+let Playing_song = false;
+
+ *{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main{
+	position: relative;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #5D6D7E, #566573);
+}
+.main button{
+	padding: 10px 12px;
+	margin: 0 10px;
+}
+.main #logo{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	font-size: 25px;
+	color: #ccc;
+}
+.main #logo i{
+	margin-right: 15px;
+}
+
+/* left & right part */
+.right,.left{
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* song image */
+.left img{
+	height: 300px;
+	width: 250px;
